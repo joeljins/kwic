@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Refactor Unhealthy Inheritance</title>
+    <style>
+        html {
+            font-family: arial;
+        }
+        header {
+            text-align: center;
+        }
+    </style>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <header>
+        <h1>Refactor Unhealthy Inheritance</h1>
+    </header>
+    <div>
+        <ul>
+            <li>There are usually two types of unhealthy inheritance relations:
+                <ul>
+                    <li>The parent class depends on the child class.</li>
+                    <li>Classes that use the inheritance tree, that is, the customer classes, depend on both the parent class and the child class(s).</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>In this case, the degree of activeness of the inheritance relationship should be analyzed, i.e. whether the inheritance tree will be modified. If the inheritance relationships have already incurred a high maintenance cost and will continue to be active, they should be refactored.</li>
+        </ul>
+        <ul>
+            <li>Before refactoring, you should examine the code that produces unhealthy inheritance to find out why an unreasonable inheritance relationship occurs, often with the following possibilities:
+                <ul>
+                    <li>The parent class does not define functions needed by all child classes, so that the customer class has to rely on specific child classes.</li>
+                    <li>Instead of being used as an abstract interface, the parent class is used as a normal class.</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>Refactoring method: decouple based on Liskov Substitution Principle
+                <ul>
+                    <li>Use DV8 to find out which file groups are inherited improperly, and to find out the design space for those file groups, i.e. all the files that depend on those files, into the refactoring branch.</li>
+                    <li>Do the following in the refactoring branch:
+                        <ul>
+                            <li>For cases in which the parent class depends on child classes, analyze the reasons, refactor the parent class so that it defines only functions that are common to all child classes, eliminating dependencies on one or more child classes.</li>
+                            <li>For cases in which the customer class depends on both the parent class and multiple child classes, redefine the parent class to include function interfaces required by all customer files, so that the customer class does not need to depend on the child classes.</li>
+                            <li>Write the appropriate unit test cases to ensure that the new code is functionally correct.</li>
+                            <li>Make sure the new code doesn't have code smells.</li>
+                            <li>Using DV8, detect:
+                                <ul>
+                                    <li>Whether the refactored code conforms to the target design.</li>
+                                    <li>The parent class should not depend on any child classes.</li>
+                                    <li>Customer files that use this inheritance relationship depend only on the parent class, not on any child classes.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

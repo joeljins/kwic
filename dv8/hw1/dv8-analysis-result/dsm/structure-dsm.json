@@ -1,0 +1,194 @@
+{
+  "@schemaVersion" : "1.0",
+  "name" : "structure-dsm",
+  "variables" : [ "AlphabetSort.java", "CircularShift.java", "ConsoleOutput.java", "Formatter.java", "IndexGenerator.java", "InputProcessor.java", "KeywordSearch.java", "Main.java", "Output.java", "Sentence.java", "Shift.java", "Sorting.java", "StopWordsFilter.java", "TextFileInput.java", "WordFilter.java" ],
+  "cells" : [ {
+    "src" : 0,
+    "dest" : 9,
+    "values" : {
+      "Use" : 1.0
+    }
+  }, {
+    "src" : 0,
+    "dest" : 11,
+    "values" : {
+      "Implement" : 1.0
+    }
+  }, {
+    "src" : 1,
+    "dest" : 9,
+    "values" : {
+      "Create" : 1.0,
+      "Contain" : 1.0,
+      "Parameter" : 1.0,
+      "Call" : 3.0,
+      "Use" : 1.0
+    }
+  }, {
+    "src" : 1,
+    "dest" : 10,
+    "values" : {
+      "Implement" : 1.0
+    }
+  }, {
+    "src" : 2,
+    "dest" : 8,
+    "values" : {
+      "Implement" : 1.0
+    }
+  }, {
+    "src" : 3,
+    "dest" : 9,
+    "values" : {
+      "Parameter" : 2.0,
+      "Call" : 4.0,
+      "Contain" : 2.0
+    }
+  }, {
+    "src" : 4,
+    "dest" : 9,
+    "values" : {
+      "Contain" : 1.0,
+      "Call" : 2.0
+    }
+  }, {
+    "src" : 4,
+    "dest" : 14,
+    "values" : {
+      "Parameter" : 1.0,
+      "Call" : 1.0
+    }
+  }, {
+    "src" : 6,
+    "dest" : 4,
+    "values" : {
+      "Parameter" : 1.0,
+      "Contain" : 1.0,
+      "Use" : 1.0,
+      "Call" : 1.0
+    }
+  }, {
+    "src" : 6,
+    "dest" : 9,
+    "values" : {
+      "Return" : 1.0,
+      "Contain" : 1.0,
+      "Parameter" : 3.0,
+      "Use" : 3.0,
+      "Call" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 0,
+    "values" : {
+      "Call" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 1,
+    "values" : {
+      "Call" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 2,
+    "values" : {
+      "Call" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 4,
+    "values" : {
+      "Call" : 2.0,
+      "Contain" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 5,
+    "values" : {
+      "Call" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 6,
+    "values" : {
+      "Contain" : 1.0,
+      "Call" : 2.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 8,
+    "values" : {
+      "Contain" : 1.0,
+      "Call" : 6.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 9,
+    "values" : {
+      "Parameter" : 3.0,
+      "Use" : 3.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 10,
+    "values" : {
+      "Contain" : 1.0,
+      "Call" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 11,
+    "values" : {
+      "Contain" : 1.0,
+      "Call" : 2.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 12,
+    "values" : {
+      "Call" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 13,
+    "values" : {
+      "Call" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 7,
+    "dest" : 14,
+    "values" : {
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 12,
+    "dest" : 14,
+    "values" : {
+      "Implement" : 1.0
+    }
+  }, {
+    "src" : 13,
+    "dest" : 5,
+    "values" : {
+      "Extend" : 1.0
+    }
+  }, {
+    "src" : 13,
+    "dest" : 9,
+    "values" : {
+      "Use" : 1.0,
+      "Create" : 1.0,
+      "Call" : 1.0,
+      "Parameter" : 1.0
+    }
+  } ]
+}

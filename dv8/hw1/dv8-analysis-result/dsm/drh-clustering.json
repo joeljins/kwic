@@ -1,0 +1,110 @@
+{
+  "@schemaVersion" : "1.0",
+  "name" : "drh-clustering",
+  "structure" : [ {
+    "@type" : "group",
+    "name" : "L0",
+    "nested" : [ {
+      "@type" : "group",
+      "name" : "L0/M0",
+      "nested" : [ {
+        "@type" : "item",
+        "name" : "Sentence.java"
+      } ]
+    } ]
+  }, {
+    "@type" : "group",
+    "name" : "L1",
+    "nested" : [ {
+      "@type" : "group",
+      "name" : "L1/M0",
+      "nested" : [ {
+        "@type" : "group",
+        "name" : "L1/M0/L0",
+        "nested" : [ {
+          "@type" : "group",
+          "name" : "L1/M0/L0/M0",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "WordFilter.java"
+          } ]
+        } ]
+      }, {
+        "@type" : "group",
+        "name" : "L1/M0/L1",
+        "nested" : [ {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M0",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "TextFileInput.java"
+          }, {
+            "@type" : "item",
+            "name" : "InputProcessor.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M1",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "StopWordsFilter.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M2",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "Sorting.java"
+          }, {
+            "@type" : "item",
+            "name" : "AlphabetSort.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M3",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "Shift.java"
+          }, {
+            "@type" : "item",
+            "name" : "CircularShift.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M4",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "Output.java"
+          }, {
+            "@type" : "item",
+            "name" : "ConsoleOutput.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M5",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "KeywordSearch.java"
+          }, {
+            "@type" : "item",
+            "name" : "IndexGenerator.java"
+          } ]
+        } ]
+      }, {
+        "@type" : "group",
+        "name" : "L1/M0/Control",
+        "nested" : [ {
+          "@type" : "item",
+          "name" : "Main.java"
+        } ]
+      } ]
+    }, {
+      "@type" : "group",
+      "name" : "L1/M1",
+      "nested" : [ {
+        "@type" : "item",
+        "name" : "Formatter.java"
+      } ]
+    } ]
+  } ]
+}

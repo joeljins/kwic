@@ -22,6 +22,10 @@ class IndexGenerator {
         return keywords;
     }
 
+    public void setIndexMap(Map<String, Set<Integer>> indexMap){
+        this.keywords = indexMap;
+    }
+
     public List<String[]> getAllWordCount(){
         List<String[]> result = new java.util.ArrayList<>();
         for (Map.Entry<String, Set<Integer>> entry : keywords.entrySet()) {

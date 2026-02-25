@@ -1,62 +1,81 @@
 @startuml
 
-'--- Main ---
-class Main {
-    + main(args: String[]): void
-}
-
 class Sentence {
     - words: List<String>
     - lineNumber: int
-    + Sentence(text: String, lineNumber: int)
+    + Sentence(words: List<String>, lineNumber: int)
     + getWords(): List<String>
     + getLineNumber(): int
     + joinSentence(): String
 }
 
+'--- Strategy: Input ---
 interface InputProcessor {
     + processInput(): List<Sentence>
+    + setFilePath(path: String): void 
 }
 
-class TextFileInput{
-    - String filePath;
+class TextInput {
+    - filePath: String
     + processInput(): List<Sentence>
-    + TextFileInput(filePath: String)
+    + TextInput(filePath: String)
+    + setFilePath(path: String): void 
 }
 
-InputProcessor <|-- TextFileInput
+class CsvInput {
+    - filePath: String
+    + processInput(): List<Sentence>
+    + CsvInput(filePath: String)
+    + setFilePath(path: String): void 
+}
 
-interface Shift{
+InputProcessor <|-- TextInput
+InputProcessor <|-- CsvInput
+
+note "<b>Strategy Pattern (Input)</b>\nEncapsulates different file parsing\nlogic (Plain Text vs CSV)." as N_Input
+InputProcessor .. N_Input
+
+'--- Strategy: Shifting ---
+interface Shift {
     + shiftSentences(sentences: List<Sentence>): List<Sentence>
 }
 
-class CircularShift{
+class CircularShift {
     + shiftSentences(sentences: List<Sentence>): List<Sentence>
 }
 
-interface Sorting{
-    + sort(List<Sentence>): List<Sentence>
+Shift <|-- CircularShift
+note "<b>Strategy Pattern (Shifting)</b>\nAllows switching shifting algorithms" as N_Shift
+Shift .. N_Shift
+
+'--- Strategy: Sorting ---
+interface Sorting {
+    + sortSentences(sentences: List<Sentence>, isAscending: boolean): void
+    + sortIndex(keymap: Map<String, Set<Integer>>, isAscending: boolean): void
 }
 
-class AlphabetSort{
-    + sort(List<Sentence>): List<Sentence>
+class AlphabetSort {
+    + sortSentences(sentences: List<Sentence>, isAscending: boolean): void
+    + sort(sentences: List<Sentence>): void
 }
 
 Sorting <|-- AlphabetSort
+
+note "<b>Strategy Pattern (Sorting)</b>\nAllows switching sorting algorithms" as N_Sort
+Sorting .. N_Sort
+
+'--- Indexing & Search ---
+interface WordFilter {
+    + accept(word: String): boolean
+}
 
 class IndexGenerator {
     - keywords: Map<String, Set<Integer>>
     + IndexGenerator(sentences: List<Sentence>, filter: WordFilter)
     + getIndexMap(): Map<String, Set<Integer>>
-    + getAllWordCount(): result: List<String[]>
+    + getAllWordCount(): List<String[]>
     + getWordLineNums(word: String): Set<Integer>
 }
-
-interface WordFilter {
-    + accept(word: String): boolean
-}
-
-IndexGenerator o-- WordFilter
 
 class KeywordSearch {
     - sentences: List<Sentence>
@@ -66,8 +85,10 @@ class KeywordSearch {
     + getSentenceByLineNum(lineNum: int): Sentence
 }
 
+IndexGenerator o-- WordFilter
 IndexGenerator <-- KeywordSearch
 
+'--- Formatting ---
 class Formatter {
     + formatSentence(s: Sentence): String
     + formatSentences(sentences: List<Sentence>): String
@@ -75,24 +96,43 @@ class Formatter {
     + formatKWIC(sentences: List<Sentence>): String
 }
 
-interface Output{
+'--- Strategy: Output ---
+interface Output {
     + write(sentences: List<Sentence>): void
+    + setFilePath(filePath: String): void
 }
 
-class ConsoleOutput{
+class ConsoleOutput {
     + write(sentences: List<Sentence>): void
+    + setFilePath(filePath: String): void
+}
+
+class TextOutput {
+    + write(sentences: List<Sentence>): void
+    + setFilePath(filePath: String): void
 }
 
 Output <|-- ConsoleOutput
+Output <|-- TextOutput
 
+note "<b>Strategy Pattern (Output)</b>\nDecouples the logic from the\ndestination (Console vs File)." as N_Output
+Output .. N_Output
+
+'--- Controller ---
+class Main {
+    + main(args: String[]): void
+}
+
+'--- Main Relationships ---
 Main --> InputProcessor
 Main --> Shift
 Main --> Sorting
-Main -- IndexGenerator
+Main --> IndexGenerator
 Main --> KeywordSearch
 Main --> Formatter
 Main --> Output
 
+'--- Usage Dependencies ---
 InputProcessor ..> Sentence : creates
 Shift ..> Sentence : generates shifts
 Sorting ..> Sentence : compares

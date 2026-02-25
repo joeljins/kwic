@@ -1,0 +1,50 @@
+{
+  "@schemaVersion" : "1.0",
+  "name" : "pkg-clustering",
+  "structure" : [ {
+    "@type" : "item",
+    "name" : "Output.java"
+  }, {
+    "@type" : "item",
+    "name" : "ConsoleOutput.java"
+  }, {
+    "@type" : "item",
+    "name" : "Shift.java"
+  }, {
+    "@type" : "item",
+    "name" : "Sentence.java"
+  }, {
+    "@type" : "item",
+    "name" : "Formatter.java"
+  }, {
+    "@type" : "item",
+    "name" : "CircularShift.java"
+  }, {
+    "@type" : "item",
+    "name" : "InputProcessor.java"
+  }, {
+    "@type" : "item",
+    "name" : "Sorting.java"
+  }, {
+    "@type" : "item",
+    "name" : "AlphabetSort.java"
+  }, {
+    "@type" : "item",
+    "name" : "TextFileInput.java"
+  }, {
+    "@type" : "item",
+    "name" : "WordFilter.java"
+  }, {
+    "@type" : "item",
+    "name" : "StopWordsFilter.java"
+  }, {
+    "@type" : "item",
+    "name" : "IndexGenerator.java"
+  }, {
+    "@type" : "item",
+    "name" : "KeywordSearch.java"
+  }, {
+    "@type" : "item",
+    "name" : "Main.java"
+  } ]
+}

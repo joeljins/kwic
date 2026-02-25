@@ -1,0 +1,62 @@
+{
+  "@schemaVersion" : "1.0",
+  "name" : "pkg-clustering",
+  "structure" : [ {
+    "@type" : "item",
+    "name" : "Output.java"
+  }, {
+    "@type" : "item",
+    "name" : "ConsoleOutput.java"
+  }, {
+    "@type" : "item",
+    "name" : "Shift.java"
+  }, {
+    "@type" : "item",
+    "name" : "Sentence.java"
+  }, {
+    "@type" : "item",
+    "name" : "Formatter.java"
+  }, {
+    "@type" : "item",
+    "name" : "Input.java"
+  }, {
+    "@type" : "item",
+    "name" : "CsvInput.java"
+  }, {
+    "@type" : "item",
+    "name" : "TextInput.java"
+  }, {
+    "@type" : "item",
+    "name" : "KWICObjectLoader.java"
+  }, {
+    "@type" : "item",
+    "name" : "OptionReader.java"
+  }, {
+    "@type" : "item",
+    "name" : "CircularShift.java"
+  }, {
+    "@type" : "item",
+    "name" : "Sorting.java"
+  }, {
+    "@type" : "item",
+    "name" : "AlphabetSort.java"
+  }, {
+    "@type" : "item",
+    "name" : "WordFilter.java"
+  }, {
+    "@type" : "item",
+    "name" : "StopWordsFilter.java"
+  }, {
+    "@type" : "item",
+    "name" : "IndexGenerator.java"
+  }, {
+    "@type" : "item",
+    "name" : "KeywordSearch.java"
+  }, {
+    "@type" : "item",
+    "name" : "Controller.java"
+  }, {
+    "@type" : "item",
+    "name" : "TextOutput.java"
+  } ]
+}

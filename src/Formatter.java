@@ -11,7 +11,7 @@ class Formatter {
         StringBuilder sb = new StringBuilder();
         for (String word : s.getWords()) {
             if (word.equalsIgnoreCase(keyword)) {
-                sb.append("**").append(word).append("** ");
+                sb.append("[").append(word).append("] ");
             } else {
                 sb.append(word).append(" ");
             }

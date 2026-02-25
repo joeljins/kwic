@@ -1,0 +1,1368 @@
+{
+  "schemaVersion" : "1.0",
+  "name" : "dependency-file-sdsm",
+  "variables" : [ "AlphabetSort.java", "CircularShift.java", "ConsoleOutput.java", "Formatter.java", "IndexGenerator.java", "InputProcessor.java", "KeywordSearch.java", "Main.java", "Output.java", "Sentence.java", "Shift.java", "Sorting.java", "StopWordsFilter.java", "TextFileInput.java", "WordFilter.java" ],
+  "cells" : [ {
+    "src" : 1,
+    "dest" : 10,
+    "values" : {
+      "Implement" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "CircularShift",
+        "file" : "CircularShift.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "dest" : {
+        "object" : "Shift",
+        "file" : "Shift.java",
+        "type" : "type",
+        "lineNumber" : 2
+      },
+      "type" : "Implement"
+    } ]
+  }, {
+    "src" : 7,
+    "dest" : 14,
+    "values" : {
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 15
+      },
+      "dest" : {
+        "object" : "WordFilter",
+        "file" : "WordFilter.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 6,
+    "dest" : 4,
+    "values" : {
+      "Call" : 1.0,
+      "Use" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "KeywordSearch.search",
+        "file" : "KeywordSearch.java",
+        "type" : "function",
+        "lineNumber" : 21
+      },
+      "dest" : {
+        "object" : "IndexGenerator.getWordLineNums",
+        "file" : "IndexGenerator.java",
+        "type" : "function",
+        "lineNumber" : 36
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "KeywordSearch.KeywordSearch",
+        "file" : "KeywordSearch.java",
+        "type" : "function",
+        "lineNumber" : 17
+      },
+      "dest" : {
+        "object" : "IndexGenerator",
+        "file" : "IndexGenerator.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "KeywordSearch.KeywordSearch",
+        "file" : "KeywordSearch.java",
+        "type" : "function",
+        "lineNumber" : 12
+      },
+      "dest" : {
+        "object" : "IndexGenerator",
+        "file" : "IndexGenerator.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Parameter"
+    }, {
+      "src" : {
+        "object" : "KeywordSearch",
+        "file" : "KeywordSearch.java",
+        "type" : "type",
+        "lineNumber" : 10
+      },
+      "dest" : {
+        "object" : "IndexGenerator",
+        "file" : "IndexGenerator.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 7,
+    "dest" : 12,
+    "values" : {
+      "Call" : 1.0,
+      "Create" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 15
+      },
+      "dest" : {
+        "object" : "StopWordsFilter",
+        "file" : "StopWordsFilter.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 15
+      },
+      "dest" : {
+        "object" : "StopWordsFilter",
+        "file" : "StopWordsFilter.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Create"
+    } ]
+  }, {
+    "src" : 7,
+    "dest" : 13,
+    "values" : {
+      "Call" : 1.0,
+      "Create" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "dest" : {
+        "object" : "TextFileInput",
+        "file" : "TextFileInput.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "dest" : {
+        "object" : "TextFileInput",
+        "file" : "TextFileInput.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Create"
+    } ]
+  }, {
+    "src" : 4,
+    "dest" : 14,
+    "values" : {
+      "Call" : 1.0,
+      "Parameter" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "IndexGenerator.IndexGenerator",
+        "file" : "IndexGenerator.java",
+        "type" : "function",
+        "lineNumber" : 13
+      },
+      "dest" : {
+        "object" : "WordFilter.accept",
+        "file" : "WordFilter.java",
+        "type" : "function",
+        "lineNumber" : 2
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "IndexGenerator.IndexGenerator",
+        "file" : "IndexGenerator.java",
+        "type" : "function",
+        "lineNumber" : 10
+      },
+      "dest" : {
+        "object" : "WordFilter",
+        "file" : "WordFilter.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Parameter"
+    } ]
+  }, {
+    "src" : 1,
+    "dest" : 9,
+    "values" : {
+      "Call" : 3.0,
+      "Create" : 1.0,
+      "Use" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "CircularShift.shiftSentences",
+        "file" : "CircularShift.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "dest" : {
+        "object" : "Sentence.getLineNum",
+        "file" : "Sentence.java",
+        "type" : "function",
+        "lineNumber" : 20
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "CircularShift.shiftSentences",
+        "file" : "CircularShift.java",
+        "type" : "function",
+        "lineNumber" : 13
+      },
+      "dest" : {
+        "object" : "Sentence.getWords",
+        "file" : "Sentence.java",
+        "type" : "function",
+        "lineNumber" : 12
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "CircularShift.shiftSentences",
+        "file" : "CircularShift.java",
+        "type" : "function",
+        "lineNumber" : 16
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "CircularShift.shiftSentences",
+        "file" : "CircularShift.java",
+        "type" : "function",
+        "lineNumber" : 16
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "CircularShift.shiftSentences.result",
+        "file" : "CircularShift.java",
+        "type" : "var",
+        "lineNumber" : 7
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "CircularShift.shiftSentences.result",
+        "file" : "CircularShift.java",
+        "type" : "var",
+        "lineNumber" : 3
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Parameter"
+    }, {
+      "src" : {
+        "object" : "CircularShift.shiftSentences",
+        "file" : "CircularShift.java",
+        "type" : "function",
+        "lineNumber" : 9
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 7,
+    "dest" : 10,
+    "values" : {
+      "Call" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 23
+      },
+      "dest" : {
+        "object" : "Shift.shiftSentences",
+        "file" : "Shift.java",
+        "type" : "function",
+        "lineNumber" : 3
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 22
+      },
+      "dest" : {
+        "object" : "Shift",
+        "file" : "Shift.java",
+        "type" : "type",
+        "lineNumber" : 2
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 7,
+    "dest" : 8,
+    "values" : {
+      "Call" : 6.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 43
+      },
+      "dest" : {
+        "object" : "Output.write",
+        "file" : "Output.java",
+        "type" : "function",
+        "lineNumber" : 2
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 55
+      },
+      "dest" : {
+        "object" : "Output.write",
+        "file" : "Output.java",
+        "type" : "function",
+        "lineNumber" : 2
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 56
+      },
+      "dest" : {
+        "object" : "Output.write",
+        "file" : "Output.java",
+        "type" : "function",
+        "lineNumber" : 2
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 57
+      },
+      "dest" : {
+        "object" : "Output.write",
+        "file" : "Output.java",
+        "type" : "function",
+        "lineNumber" : 2
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 58
+      },
+      "dest" : {
+        "object" : "Output.write",
+        "file" : "Output.java",
+        "type" : "function",
+        "lineNumber" : 2
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 63
+      },
+      "dest" : {
+        "object" : "Output.write",
+        "file" : "Output.java",
+        "type" : "function",
+        "lineNumber" : 2
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 31
+      },
+      "dest" : {
+        "object" : "Output",
+        "file" : "Output.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 7,
+    "dest" : 11,
+    "values" : {
+      "Call" : 2.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 27
+      },
+      "dest" : {
+        "object" : "Sorting.sort",
+        "file" : "Sorting.java",
+        "type" : "function",
+        "lineNumber" : 4
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 42
+      },
+      "dest" : {
+        "object" : "Sorting.sort",
+        "file" : "Sorting.java",
+        "type" : "function",
+        "lineNumber" : 4
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 26
+      },
+      "dest" : {
+        "object" : "Sorting",
+        "file" : "Sorting.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 7,
+    "dest" : 9,
+    "values" : {
+      "Use" : 3.0,
+      "Parameter" : 3.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main.sentences",
+        "file" : "Main.java",
+        "type" : "var",
+        "lineNumber" : 12
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "Main.main.shiftedSentences",
+        "file" : "Main.java",
+        "type" : "var",
+        "lineNumber" : 23
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "Main.main.results",
+        "file" : "Main.java",
+        "type" : "var",
+        "lineNumber" : 50
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "Main.main.sentences",
+        "file" : "Main.java",
+        "type" : "var",
+        "lineNumber" : 3
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Parameter"
+    }, {
+      "src" : {
+        "object" : "Main.main.shiftedSentences",
+        "file" : "Main.java",
+        "type" : "var",
+        "lineNumber" : 3
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Parameter"
+    }, {
+      "src" : {
+        "object" : "Main.main.results",
+        "file" : "Main.java",
+        "type" : "var",
+        "lineNumber" : 3
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Parameter"
+    } ]
+  }, {
+    "src" : 7,
+    "dest" : 4,
+    "values" : {
+      "Call" : 2.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 18
+      },
+      "dest" : {
+        "object" : "IndexGenerator",
+        "file" : "IndexGenerator.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 63
+      },
+      "dest" : {
+        "object" : "IndexGenerator.getAllWordCount",
+        "file" : "IndexGenerator.java",
+        "type" : "function",
+        "lineNumber" : 25
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 18
+      },
+      "dest" : {
+        "object" : "IndexGenerator",
+        "file" : "IndexGenerator.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 18
+      },
+      "dest" : {
+        "object" : "IndexGenerator",
+        "file" : "IndexGenerator.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 7,
+    "dest" : 5,
+    "values" : {
+      "Call" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 12
+      },
+      "dest" : {
+        "object" : "InputProcessor.processInput",
+        "file" : "InputProcessor.java",
+        "type" : "function",
+        "lineNumber" : 3
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "dest" : {
+        "object" : "InputProcessor",
+        "file" : "InputProcessor.java",
+        "type" : "type",
+        "lineNumber" : 2
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 7,
+    "dest" : 6,
+    "values" : {
+      "Call" : 2.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 19
+      },
+      "dest" : {
+        "object" : "KeywordSearch",
+        "file" : "KeywordSearch.java",
+        "type" : "type",
+        "lineNumber" : 7
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 50
+      },
+      "dest" : {
+        "object" : "KeywordSearch.search",
+        "file" : "KeywordSearch.java",
+        "type" : "function",
+        "lineNumber" : 20
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 19
+      },
+      "dest" : {
+        "object" : "KeywordSearch",
+        "file" : "KeywordSearch.java",
+        "type" : "type",
+        "lineNumber" : 7
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 19
+      },
+      "dest" : {
+        "object" : "KeywordSearch",
+        "file" : "KeywordSearch.java",
+        "type" : "type",
+        "lineNumber" : 7
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 7,
+    "dest" : 0,
+    "values" : {
+      "Call" : 1.0,
+      "Create" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 26
+      },
+      "dest" : {
+        "object" : "AlphabetSort",
+        "file" : "AlphabetSort.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 26
+      },
+      "dest" : {
+        "object" : "AlphabetSort",
+        "file" : "AlphabetSort.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Create"
+    } ]
+  }, {
+    "src" : 7,
+    "dest" : 1,
+    "values" : {
+      "Call" : 1.0,
+      "Create" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 22
+      },
+      "dest" : {
+        "object" : "CircularShift",
+        "file" : "CircularShift.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 22
+      },
+      "dest" : {
+        "object" : "CircularShift",
+        "file" : "CircularShift.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Create"
+    } ]
+  }, {
+    "src" : 7,
+    "dest" : 2,
+    "values" : {
+      "Call" : 1.0,
+      "Create" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 31
+      },
+      "dest" : {
+        "object" : "ConsoleOutput",
+        "file" : "ConsoleOutput.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "Main.java",
+        "type" : "function",
+        "lineNumber" : 31
+      },
+      "dest" : {
+        "object" : "ConsoleOutput",
+        "file" : "ConsoleOutput.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Create"
+    } ]
+  }, {
+    "src" : 2,
+    "dest" : 8,
+    "values" : {
+      "Implement" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "ConsoleOutput",
+        "file" : "ConsoleOutput.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "dest" : {
+        "object" : "Output",
+        "file" : "Output.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Implement"
+    } ]
+  }, {
+    "src" : 6,
+    "dest" : 9,
+    "values" : {
+      "Call" : 1.0,
+      "Return" : 1.0,
+      "Use" : 3.0,
+      "Parameter" : 3.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "KeywordSearch.KeywordSearch",
+        "file" : "KeywordSearch.java",
+        "type" : "function",
+        "lineNumber" : 15
+      },
+      "dest" : {
+        "object" : "Sentence.getLineNum",
+        "file" : "Sentence.java",
+        "type" : "function",
+        "lineNumber" : 20
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "KeywordSearch.getSentenceByLineNum",
+        "file" : "KeywordSearch.java",
+        "type" : "function",
+        "lineNumber" : 29
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Return"
+    }, {
+      "src" : {
+        "object" : "KeywordSearch.sentences",
+        "file" : "KeywordSearch.java",
+        "type" : "var",
+        "lineNumber" : 8
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "KeywordSearch.lookUp",
+        "file" : "KeywordSearch.java",
+        "type" : "var",
+        "lineNumber" : 9
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "KeywordSearch.search.sentences",
+        "file" : "KeywordSearch.java",
+        "type" : "var",
+        "lineNumber" : 22
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "KeywordSearch.sentences",
+        "file" : "KeywordSearch.java",
+        "type" : "var",
+        "lineNumber" : 3
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Parameter"
+    }, {
+      "src" : {
+        "object" : "KeywordSearch.lookUp",
+        "file" : "KeywordSearch.java",
+        "type" : "var",
+        "lineNumber" : 3
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Parameter"
+    }, {
+      "src" : {
+        "object" : "KeywordSearch.search.sentences",
+        "file" : "KeywordSearch.java",
+        "type" : "var",
+        "lineNumber" : 3
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Parameter"
+    }, {
+      "src" : {
+        "object" : "KeywordSearch.KeywordSearch",
+        "file" : "KeywordSearch.java",
+        "type" : "function",
+        "lineNumber" : 14
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 3,
+    "dest" : 9,
+    "values" : {
+      "Call" : 4.0,
+      "Parameter" : 2.0,
+      "Contain" : 2.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Formatter.formatSentence",
+        "file" : "Formatter.java",
+        "type" : "function",
+        "lineNumber" : 7
+      },
+      "dest" : {
+        "object" : "Sentence.getWords",
+        "file" : "Sentence.java",
+        "type" : "function",
+        "lineNumber" : 12
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Formatter.boldFormatSentence",
+        "file" : "Formatter.java",
+        "type" : "function",
+        "lineNumber" : 12
+      },
+      "dest" : {
+        "object" : "Sentence.getWords",
+        "file" : "Sentence.java",
+        "type" : "function",
+        "lineNumber" : 12
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Formatter.formatKWIC",
+        "file" : "Formatter.java",
+        "type" : "function",
+        "lineNumber" : 50
+      },
+      "dest" : {
+        "object" : "Sentence.joinSentence",
+        "file" : "Sentence.java",
+        "type" : "function",
+        "lineNumber" : 16
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Formatter.formatKWIC",
+        "file" : "Formatter.java",
+        "type" : "function",
+        "lineNumber" : 52
+      },
+      "dest" : {
+        "object" : "Sentence.getLineNum",
+        "file" : "Sentence.java",
+        "type" : "function",
+        "lineNumber" : 20
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Formatter.formatSentence",
+        "file" : "Formatter.java",
+        "type" : "function",
+        "lineNumber" : 6
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Parameter"
+    }, {
+      "src" : {
+        "object" : "Formatter.boldFormatSentence",
+        "file" : "Formatter.java",
+        "type" : "function",
+        "lineNumber" : 10
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Parameter"
+    }, {
+      "src" : {
+        "object" : "Formatter.formatSentences",
+        "file" : "Formatter.java",
+        "type" : "function",
+        "lineNumber" : 25
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Contain"
+    }, {
+      "src" : {
+        "object" : "Formatter.formatKWIC",
+        "file" : "Formatter.java",
+        "type" : "function",
+        "lineNumber" : 47
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 0,
+    "dest" : 9,
+    "values" : {
+      "Use" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "AlphabetSort.sort",
+        "file" : "AlphabetSort.java",
+        "type" : "function",
+        "lineNumber" : 10
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Use"
+    } ]
+  }, {
+    "src" : 12,
+    "dest" : 14,
+    "values" : {
+      "Implement" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "StopWordsFilter",
+        "file" : "StopWordsFilter.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "dest" : {
+        "object" : "WordFilter",
+        "file" : "WordFilter.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Implement"
+    } ]
+  }, {
+    "src" : 0,
+    "dest" : 11,
+    "values" : {
+      "Implement" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "AlphabetSort",
+        "file" : "AlphabetSort.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "dest" : {
+        "object" : "Sorting",
+        "file" : "Sorting.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Implement"
+    } ]
+  }, {
+    "src" : 13,
+    "dest" : 5,
+    "values" : {
+      "Extend" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "TextFileInput",
+        "file" : "TextFileInput.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "dest" : {
+        "object" : "InputProcessor",
+        "file" : "InputProcessor.java",
+        "type" : "type",
+        "lineNumber" : 2
+      },
+      "type" : "Extend"
+    } ]
+  }, {
+    "src" : 13,
+    "dest" : 9,
+    "values" : {
+      "Call" : 1.0,
+      "Create" : 1.0,
+      "Use" : 1.0,
+      "Parameter" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "TextFileInput.processInput",
+        "file" : "TextFileInput.java",
+        "type" : "function",
+        "lineNumber" : 28
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "TextFileInput.processInput",
+        "file" : "TextFileInput.java",
+        "type" : "function",
+        "lineNumber" : 28
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "TextFileInput.processInput.sentences",
+        "file" : "TextFileInput.java",
+        "type" : "var",
+        "lineNumber" : 13
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "TextFileInput.processInput.sentences",
+        "file" : "TextFileInput.java",
+        "type" : "var",
+        "lineNumber" : 3
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Parameter"
+    } ]
+  }, {
+    "src" : 4,
+    "dest" : 9,
+    "values" : {
+      "Call" : 2.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "IndexGenerator.IndexGenerator",
+        "file" : "IndexGenerator.java",
+        "type" : "function",
+        "lineNumber" : 12
+      },
+      "dest" : {
+        "object" : "Sentence.getWords",
+        "file" : "Sentence.java",
+        "type" : "function",
+        "lineNumber" : 12
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "IndexGenerator.IndexGenerator",
+        "file" : "IndexGenerator.java",
+        "type" : "function",
+        "lineNumber" : 15
+      },
+      "dest" : {
+        "object" : "Sentence.getLineNum",
+        "file" : "Sentence.java",
+        "type" : "function",
+        "lineNumber" : 20
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "IndexGenerator.IndexGenerator",
+        "file" : "IndexGenerator.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "dest" : {
+        "object" : "Sentence",
+        "file" : "Sentence.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Contain"
+    } ]
+  } ]
+}
