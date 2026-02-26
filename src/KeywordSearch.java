@@ -26,6 +26,8 @@ class KeywordSearch{
         return sentences;
     }
 
+    // Retrieve line by line number for search results
+    // getSentenceByLineNum(1) = 1: Sense and Sensibility
     public Sentence getSentenceByLineNum(int lineNum){
         return lookUp.get(lineNum);
     }
