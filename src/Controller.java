@@ -80,7 +80,12 @@ public class Controller {
                 }
             }
             case "index-generation" -> out.write(formatter.formatIndex(indexGen.getAllWordCount()));
-            default -> System.out.println("Invalid command line argument: " + args[0]);
+            default -> System.out.println("No command given / Invalid command " + args[0]);
         }
+
+        int portNo = 8080;
+        Server server = new Server(portNo, keySearch, formatter);
+        server.start();
+
     } 
 }
