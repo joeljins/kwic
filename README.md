@@ -17,7 +17,7 @@ java -jar server.jar server config.properties
 ### To Compile Client:
 ```bash
 javac -d ./client_out client_src/*.java
-jar cfe client.jar Client -C client_out .
+jar cfe client.jar ClientMain -C client_out .
 ```
 
 ### To Run Client:

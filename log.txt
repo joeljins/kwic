@@ -1,2 +1,2 @@
 Total Requests: 1
-Successful Responses: 2
+Successful Responses: 1
