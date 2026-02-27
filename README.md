@@ -7,6 +7,7 @@ jar cfe server.jar Controller -C server_out .
 ```
 
 ### To Run Server:
+The fourth command runs the server. 
 ```bash
 java -jar server.jar kwic-processing config.properties 
 java -jar server.jar keyword-search <keyword> config.properties 
