@@ -5,10 +5,12 @@ public class Controller {
     
     public static void main(String[] args) {
         // Handle missing args 
+        /*
         if (args.length == 0) {
             System.out.println("Error: Please provide a command (e.g., kwic-processing)");
             return;
         }
+        */
 
         // Load Configuration
         OptionReader.readOptions(args[args.length - 1]);
@@ -80,12 +82,14 @@ public class Controller {
                 }
             }
             case "index-generation" -> out.write(formatter.formatIndex(indexGen.getAllWordCount()));
-            default -> System.out.println("No command given / Invalid command " + args[0]);
+            case "server" -> {
+                int portNo = 8080;
+                Logger logger = new Logger("log.txt");
+                Server server = new Server(portNo, keySearch, formatter, logger);
+                server.start();
+            }
+            default -> System.out.println("No command given / Invalid command: " + args[0]);
         }
-
-        int portNo = 8080;
-        Server server = new Server(portNo, keySearch, formatter);
-        server.start();
 
     } 
 }

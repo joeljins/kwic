@@ -6,10 +6,12 @@ public class Server {
     private ServerSocket serverSocket;
     private final KeywordSearch keySearch;
     private final Formatter formatter;
+    private final Logger logger;
 
-    public Server(int port, KeywordSearch keySearch, Formatter formatter) {
+    public Server(int port, KeywordSearch keySearch, Formatter formatter, Logger logger) {
         this.keySearch = keySearch;
         this.formatter = formatter;
+        this.logger = logger;
 
         try {
             serverSocket = new ServerSocket(port);
@@ -40,7 +42,8 @@ public class Server {
                         in,
                         out,
                         keySearch,
-                        formatter
+                        formatter,
+                        logger
                 );
 
                 t.start();

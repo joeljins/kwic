@@ -9,17 +9,20 @@ class ClientHandler extends Thread {
     final Socket clientSocket;
     private final KeywordSearch keySearch;
     private final Formatter formatter;
+    private final Logger logger;
 
     public ClientHandler(Socket clientSocket,
                          DataInputStream dis,
                          DataOutputStream dos,
                          KeywordSearch keySearch,
-                         Formatter formatter) {
+                         Formatter formatter,
+                         Logger logger) {
         this.clientSocket = clientSocket;
         this.dis = dis;
         this.dos = dos;
         this.keySearch = keySearch;
         this.formatter = formatter;
+        this.logger = logger;
     }
 
     @Override
@@ -28,27 +31,29 @@ class ClientHandler extends Thread {
 
         while (true) {
             try {
-                dos.writeUTF("Enter keyword");
+                dos.writeUTF("Enter 'keyword-search <keyword>' or 'Exit' to terminate connection.");
 
                 received = dis.readUTF();
-
-                if (received.equals("Exit")) {
-                    this.clientSocket.close();
-                    break;
-                }
-
                 String[] command = received.split(" ");
 
                 switch (command[0]) {
+                    case "Exit" -> {
+                        this.clientSocket.close();
+                        break;
+                    }
                     case "keyword-search" -> {
                         if (command.length < 2) {
                             dos.writeUTF("Error: Please provide a keyword to search.");
                             continue;
                         }
-
+                        logger.received();
                         String keyword = command[1];
                         List<Sentence> results = keySearch.search(keyword);
                         int numResults = results.size();
+                        if (numResults == 0) {
+                            dos.writeUTF("No sentences found containing the keyword: " + keyword);
+                            continue;
+                        }
 
                         StringBuilder sb = new StringBuilder();
                         sb.append("Index | Line with Keyword Bolded | Origin Line Index\n");
@@ -64,6 +69,7 @@ class ClientHandler extends Thread {
                         }
 
                         dos.writeUTF(sb.toString());
+                        logger.responded();
                     }
 
                     default -> dos.writeUTF("Invalid input");
