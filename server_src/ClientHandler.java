@@ -56,6 +56,7 @@ class ClientHandler extends Thread {
                         }
 
                         StringBuilder sb = new StringBuilder();
+                        sb.append(numResults).append(" sentence(s) found containing the keyword: ").append(keyword).append("\n");
                         sb.append("Index | Line with Keyword Bolded | Origin Line Index\n");
 
                         for (int i = 0; i < numResults; i++) {

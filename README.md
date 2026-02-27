@@ -25,12 +25,15 @@ jar cfe client.jar ClientMain -C client_out .
 java -jar client.jar 
 ```
 
+### Compile All:
+```bash
+javac -d ./server_out server_src/*.java
+jar cfe server.jar Controller -C server_out .
+javac -d ./server_out server_src/*.java
+jar cfe server.jar Controller -C server_out .
+```
+
 ### Misc.
 - You need to use a .txt file when "Input=TxtInputObj"
 - You need to use a .csv file when "Input=CSVInputObj"
 
-
-### Misc.
-- Not mentioned in instructions/rubroc
-    - Testing all invalid inputs
-    - Case sensitivity for search
