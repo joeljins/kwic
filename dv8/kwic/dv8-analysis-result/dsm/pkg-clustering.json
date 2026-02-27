@@ -1,0 +1,91 @@
+{
+  "@schemaVersion" : "1.0",
+  "name" : "pkg-clustering",
+  "structure" : [ {
+    "@type" : "group",
+    "name" : "client_src",
+    "nested" : [ {
+      "@type" : "item",
+      "name" : "client_src/Client.java"
+    }, {
+      "@type" : "item",
+      "name" : "client_src/ClientMain.java"
+    } ]
+  }, {
+    "@type" : "group",
+    "name" : "server_src",
+    "nested" : [ {
+      "@type" : "item",
+      "name" : "server_src/Shift.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/InputProcessor.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/Logger.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/Output.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/Input.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/TextOutput.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/KWICObjectLoader.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/OptionReader.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/WordFilter.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/Sentence.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/CircularShift.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/CsvInput.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/TextInput.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/Formatter.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/TextFileInput.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/IndexGenerator.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/StopWordsFilter.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/ConsoleOutput.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/KeywordSearch.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/ClientHandler.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/Server.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/Sorting.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/AlphabetSort.java"
+    }, {
+      "@type" : "item",
+      "name" : "server_src/Controller.java"
+    } ]
+  } ]
+}
